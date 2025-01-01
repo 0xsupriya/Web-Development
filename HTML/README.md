@@ -1,334 +1,144 @@
---> HTML
-Hyper Text Markup Language
+# HTML Cheat Sheet
 
-HTML is the code that is used to
-structure a web page and its content.
+HTML (HyperText Markup Language) is the standard language for creating web pages. Below is a concise guide to essential HTML tags, attributes, and forms.
 
-The component used to design the
-structure of websites are called HTML tags.
+---
 
---> HTML TAG
-A container for some content or other HTML tags.
+## HTML Structure
 
---> BASIC HTML PAGE
-
-<!DOCTYPE html>  //tells browser you are using HTML5
-<html> //root of an html document
-<head> //container for metadata
-<title>My First Page</title> //page title
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body> //contains all data rendered by the browser
-<p>hello world</p> //paragraph tag
+<body>
+    <!-- Content goes here -->
 </body>
 </html>
 
---> POINTS
-Html tag is parent of head & body tag
 
-Most of html elements have opening & closing tags
-with content in between
+---
 
-Some tags have no content in between, eg - <br>
+Common HTML Tags
 
-We can use inspect element/view page source to edit html
+Basic Tags
 
---> Comments in HTML
+<!DOCTYPE>: Declares document type.
 
-<!-- This is an HTML Comment -->
+<html>: Root element.
 
-This is part of code that should not
+<head>: Metadata container.
 
---> HTML is NOT case sensitive
+<title>: Defines page title.
 
-<p> = <P>
-<html> = <HTML>
-<head> = <HEAD>
-<body> = <BODY>
+<body>: Main content container.
 
---> Basic HTML Tags
 
-Attributes are used to add more information to the tag
-HTML Attributes
+Headings
 
-<html lang="en">
+<h1>Heading 1</h1> <h2>Heading 2</h2> ... <h6>Heading 6</h6>
 
-Heading Tag
+Text Formatting
 
---> Used to display headings in HTML
+<p>Paragraph</p> <b>Bold</b> <i>Italic</i> <u>Underline</u> <br> Line Break
+<span>Inline</span> <div>Block</div>
 
-h1 (most important)
-h2
-h3
-h4
-h5
-h6 (least important)
+Lists
 
---> Paragraph Tag
+<ol><li>Item 1</li></ol> <ul><li>Item A</li></ul>
 
-Used to add paragraphs in HTML
+Links & Images
 
-<p> This is a sample paragraph </p>
+<a href="url">Link</a> <img src="image.jpg" alt="Description">
 
---> Anchor Tag
-
-Used to add links to your page
-
-<a href="https://google.com"> Google </a>
-
---> Image Tag
-
-Used to add images to your page
-
-<img src="/image.png" alt="Random Image">
-
---> Image Tag
-
-Used to add images to your page
-
-<img src="/image.png" alt="Random Image">
-
---> Bold, Italic & Underline Tags
-
-Used to highlight text in your page
-
-<b> Bold </b>
-
-<i> Italic </i>
-
-<u> Underline </u>
-
---> Big & Small Tags
-
-Used to display big & small text on your page
-
-<big> Big </big>
-
-<small> Small </small>
-
---> Hr Tag
-
-Used to display a horizontal ruler, used to separate content
-
-<hr>
-
---> Subscript & Superscript Tag
-
-Used to display a horizontal ruler, used to separate content
-
-<sub> subscript </sub>
-
-<sup> superscript </sup>
-
-H2O
-
-A + B
-
---> Pre Tag
-
-Used to display text as it is (without ignoring spaces & next line)
-
-<pre> This
-
-is a sample
-
-text.
-
-</pre>
-
---> Page Layout Techniques
-
-using Semantic tags for layout
-
-<header>
-
-<main>
-
-<footer>
-
---> Inside Main Tag
-
-Section Tag
-
-<section>
-
-For a section on your page
-
-Article Tag
-
-<article>
-
-For an article on your page
-
-Aside Tag
-
-<aside>
-
-For content aside main content(ads)
-
---> Revisiting Anchor Tag
-
-<a href="https://google.com" target="_main"> Google </a>
-
-for new tab
-
-<a href="https://google.com"> <img src="link"> </a>
-
-clickable pic
-
---> Revisiting Image Tag
-
-set height
-
-set width
-
-<img src="link" height=50px >
-
-<img src="link" width=50px >
-
---> Div Tag
-
-Div is a container used for other HTML elements
-
-Block Element (takes full width)
-
---> Span Tag
-
-Span is also a container used for other HTML elements
-
-Inline Element (takes width as per size)
-
---> List in HTML
-
-Lists are used to represent real life list data.
-
-unordered ordered
-
-<ul>
-
-</ul>
-<li> Apple </li>
-
-<li> Mango </li>
-
-<ol>
-
-</ol>
-<li> Apple </li>
-
-<li> Mango </li>
-
---> Tables in HTML
-
-Tables are used to represent real life table data.
-
-<tr> used to display table row
-
-<td>
-
-<th>
-
-used to display table data
-
-used to display table header
-
---> Tables in HTML
-
-</table>
-
-<th> Name </th>
+Tables
 
 <table>
+    <thead><tr><th>Header</th></tr></thead>
+    <tbody><tr><td>Data</td></tr></tbody>
+</table>
 
-<tr>
 
-<th> Roll No </th>
+---
 
-</tr>
+HTML Attributes
 
-<td> supriya </th>
+id: Unique identifier.
 
-<tr>
+class: CSS class.
 
-<th> 1664 </th>
+style: Inline styling.
 
-</tr>
+src: Image or script source.
 
---> Caption in Tables
+alt: Alternative text.
 
-<caption> Student Data </caption>
+href: URL for links.
 
---> colspan attribute
+target="_blank": Opens link in a new tab.
 
-colspan="n"
 
-used to create cells which spans over multiple columns
+Example:
 
---> Form in HTML
+<a href="url" target="_blank" class="btn">Link</a>
 
-Forms are used to collect data from the user
 
-Eg- sign up/login/help requests/contact me
+---
 
-<form>
-form content
+Forms & Inputs
+
+Basic Structure
+
+<form action="submit.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit</button>
 </form>
 
---> Form Element : Input
+Input Types
 
-<input type="text" placeholder="Enter Name">
+Text: <input type="text">
 
---> Label
+Password: <input type="password">
 
-<input type="radio" value="class X" name="class" id="id1">
+Email: <input type="email">
 
-<label for="id1">
+Radio: <input type="radio">
 
-</label>
+Checkbox: <input type="checkbox">
 
-<input type="radio" value="class X" name="class" id="id2">
+Submit: <input type="submit">
 
-<label for="id2">
 
-</label>
+Dropdown Menu
 
---> Class & Id
-
-<div id="id1" class="group1">
-
-</div>
-
-<div id="id2"> class="group1">
-
-</div>
-
---> Checkbox
-
-<input type="checkbox" value="class X" name="class" id="id1">
-
-<label for="id1">
-
-</label>
-
-<input type="checkbox" value="class X" name="class" id="id2">
-
-<label for="id2">
-
-</label>
-
--->Textarea
-
-<textarea name="feedback" id="feedback" placeholder="Please add Feedback">
-
-</textarea>
-
---> Select
-
-<option value="Delhi"> Delhi </option>
-
-<select name="city" id="city">
-
+<select name="options">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
 </select>
 
-<option value="Mumbai"> Delhi </option>
 
-<option value="Banglore"> Delhi </option>
+---
+
+Miscellaneous Tags
+
+<meta charset="UTF-8">: Character encoding.
+
+<link rel="stylesheet" href="style.css">: Links CSS files.
+
+<script src="script.js"></script>: Links JavaScript files.
+
+<footer>: Defines footer section.
+
+<header>: Defines header section.
+
+
+
+---
+
+This cheat sheet provides an overview of HTML essentials. It’s perfect for quick reference and learning!
+
+```
