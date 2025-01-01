@@ -20,224 +20,114 @@ h6 {
 }
 
 p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
+  margin: 0 0 1.5em;
 }
 
+/* Links */
 a {
-  color: #0066cc;
+  color: #007bff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0056a3;
   text-decoration: underline;
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #333;
+/* Lists */
+ul {
+  list-style-type: disc;
+  margin: 1em 0;
+  padding-left: 40px;
 }
 
-nav ul li {
-  margin: 0 10px;
+ol {
+  list-style-type: decimal;
+  margin: 1em 0;
+  padding-left: 40px;
 }
 
-nav ul li a {
+/* Buttons */
+button {
+  background-color: #007bff;
   color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
-  background-color: #555;
+button:hover {
+  background-color: #0056b3;
 }
 
-/* Box Model */
+/* Forms */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Layout */
 .container {
-  width: 80%;
-  margin: 20px auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col {
+  flex: 1;
+  padding: 10px;
 }
 
 /* Images */
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
 }
 
-/* Tables */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+/* Utilities */
+.text-center {
+  text-align: center;
 }
 
-table th,
-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
+.text-right {
+  text-align: right;
+}
+
+.text-left {
   text-align: left;
 }
 
-table th {
-  background-color: #f4f4f4;
+.hidden {
+  display: none;
 }
 
-/* Lists */
-ul {
-  list-style: square inside;
-}
-
-ol {
-  list-style: decimal outside;
-}
-
-/* Forms */
-form {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-form label {
+.visible {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
 }
 
-form input,
-form select,
-form textarea,
-form button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-form input[type="checkbox"],
-form input[type="radio"] {
-  width: auto;
-  margin-right: 10px;
-}
-
-form button {
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #0056a3;
-}
-
-/* Positioning */
-.header {
-  position: relative;
-  background-color: #0066cc;
-  color: white;
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
   padding: 20px;
   text-align: center;
-}
-
-.header h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-
-/* Flexbox */
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.flex-item {
-  flex: 1;
-  margin: 10px;
-  padding: 10px;
-  background-color: #eaeaea;
-  text-align: center;
-}
-
-/* Grid */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.grid-item {
-  background-color: #eaeaea;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Pseudo-classes and Pseudo-elements */
-button:hover {
-  background-color: #0056a3;
-  color: white;
-}
-
-button::before {
-  content: "▶ ";
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animated {
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .flex-container {
-    flex-direction: column;
-  }
-
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
 }
